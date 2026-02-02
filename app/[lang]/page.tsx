@@ -31,10 +31,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page({
 	params,
 }: {
-	params: Promise<{ lang: Locale }>;
+	params: Promise<{ lang: string }>;
 }) {
 	const { lang } = await params;
 	const dict = await getDictionary(lang);
 
-	return <HomeClient dict={dict} lang={lang} />;
+	return <HomeClient dict={dict} lang={lang as Locale} />;
 }
