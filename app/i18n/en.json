@@ -1,0 +1,162 @@
+{
+	"header": {
+		"nav": {
+			"advantages": "Benefits",
+			"faq": "FAQ",
+			"providers": "Providers",
+			"contacts": "Contacts"
+		},
+		"login": "Login",
+		"register": "Sign Up"
+	},
+	"hero": {
+		"title": "Your Traffic.\n Our Brands.\n Shared Profit.",
+		"subtitle": "Up to 60% RevShare, optimized funnels, detailed FTD/LTV analytics, quality retention.",
+		"register": "Sign Up"
+	},
+	"advantages": {
+		"title": "Our Benefits",
+		"items": [
+			{
+				"title": "Promo for Every Event",
+				"desc": "We prepare relevant promotions and creatives for top events — launch faster, increase conversion and FTD."
+			},
+			{
+				"title": "Multilingual Landings for Any GEO",
+				"desc": "Flexible templates and content localization help match offers with audiences more precisely and boost CR."
+			},
+			{
+				"title": "Bonus Grids for Conversion Growth",
+				"desc": "Personalized promos and bonuses by traffic segments enhance first deposits and player LTV."
+			},
+			{
+				"title": "Transparent Real-Time Analytics",
+				"desc": "Detailed reports on clicks, FTD and retention."
+			},
+			{
+				"title": "High Casino Audience Retention",
+				"desc": "Well-designed retention mechanics and regular events bring players back and increase RevShare."
+			},
+			{
+				"title": "Support for Multiple Traffic Sources",
+				"desc": "From SEO to social media and streams — flexible rules and tools for different channels."
+			},
+			{
+				"title": "Payment Infrastructure That's Always Online",
+				"desc": "No deposit issues, clients don't leave, and minimal friction for conversion."
+			}
+		]
+	},
+	"providers": {
+		"title": "Game Providers"
+	},
+	"landings": {
+		"title": "LANDINGS THAT CONVERT:\nFOR EVERY SLOT AND EVENT",
+		"list": [
+			"Well-designed funnels at every stage",
+			"Dynamic elements",
+			"Localization",
+			"Quick launch"
+		],
+		"cta": "Sign Up"
+	},
+	"retention": {
+		"title": "THE BEST PLAYER RETENTION\nTEAM ON THE MARKET!",
+		"subtitle": "Multichannel work with every user:",
+		"channels": "email, SMS, AI Call, Push, Pop-up, Call Center, WhatsApp, Telegram.",
+		"description": "We know how to work with players to keep them with us and generate profit for you!",
+		"cta": "SIGN UP"
+	},
+	"faq": {
+		"title": "FAQ",
+		"tabs": {
+			"general": "ABOUT THE AFFILIATE PROGRAM",
+			"income": "INCOME AND TOOLS"
+		},
+		"items": {
+			"general": [
+				{
+					"q": "What is the BuffBets affiliate program?",
+					"a": "It's a program that allows you to earn by attracting new players to our platform."
+				},
+				{
+					"q": "How does the BuffBets affiliate program work?",
+					"a": "You place affiliate links, users register, and you receive a percentage of the profit."
+				},
+				{
+					"q": "How do I become a BuffBets affiliate partner?",
+					"a": "Register on our website, fill out your profile, and contact a manager to activate your account."
+				},
+				{
+					"q": "Is participation in the affiliate program free?",
+					"a": "Yes, participation is completely free. We don't charge any fees for joining."
+				},
+				{
+					"q": "Which GEOs can I attract traffic from?",
+					"a": "We work with a wide list of GEOs. Check with your personal manager for the current list."
+				},
+				{
+					"q": "What is an affiliate link and how do I get one?",
+					"a": "It's a unique link that assigns a player to you. It's available in your dashboard after registration."
+				},
+				{
+					"q": "Can I promote BuffBets on multiple platforms?",
+					"a": "Yes, you can create separate streams for each platform to track effectiveness."
+				}
+			],
+			"income": [
+				{
+					"q": "How often are payouts made?",
+					"a": "Payouts are made weekly or monthly, depending on your plan terms."
+				},
+				{
+					"q": "What is the minimum withdrawal amount?",
+					"a": "The minimum withdrawal amount is 50 USDT."
+				},
+				{
+					"q": "What payment models are available?",
+					"a": "We work with CPA, RevShare, and Hybrid models. Discuss terms with your manager."
+				}
+			]
+		}
+	},
+	"contacts": {
+		"title": "CONTACTS",
+		"subtitle_prefix": "AFFILIATE PROGRAM",
+		"subtitle_highlight": "BUFFBETS PARTNERS",
+		"subtitle_suffix": "HAVE QUESTIONS?",
+		"email_label": "E-mail",
+		"telegram_label": "Telegram",
+		"cta": "CONTACT US NOW",
+		"email_link": "support@buffbets.com",
+		"telegram_link": "https://t.me/buffbets_manager"
+	},
+	"modal": {
+		"title": "BECOME A PARTNER",
+		"desc": "Fill out the form and our manager will contact you shortly.",
+		"fields": {
+			"company": "Company Name",
+			"name": "Name",
+			"telegram": "Telegram Username",
+			"traffic_source": "Traffic Source",
+			"ftd_volume": "Monthly FTD Volume"
+		},
+		"placeholders": {
+			"company": "e.g.: BuffTeam",
+			"name": "Your name",
+			"telegram": "@username",
+			"traffic_source": "SEO, PPC, FB, TikTok...",
+			"ftd_volume": "e.g.: 50-100"
+		},
+		"submit": "SUBMIT APPLICATION",
+		"success_title": "APPLICATION SUBMITTED!",
+		"success_desc": "Thank you! We've already started processing it."
+	},
+	"footer": {
+		"nav": {
+			"recomendations": "recommendations",
+			"privacy_policy": "privacy policy",
+			"rules": "Affiliate Program Rules"
+		}
+	}
+}
