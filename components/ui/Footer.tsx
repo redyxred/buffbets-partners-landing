@@ -24,9 +24,9 @@ export function Footer({ className, lang, dict }: FooterProps) {
 			initial={{ opacity: 0, y: 100 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.6, delay: 0.4 }}
-			className={`w-full h-auto py-12 ${className}`}
+			className={`w-full h-auto py-6 sm:py-8 md:py-12 ${className}`}
 		>
-			<Container className="flex justify-between items-center">
+			<Container className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
 				<Link
 					href={`/${lang}`}
 					className="shrink-0 relative block transition-transform hover:scale-105"
@@ -36,16 +36,16 @@ export function Footer({ className, lang, dict }: FooterProps) {
 						alt="Logo"
 						width={155}
 						height={79}
-						className="h-12 md:h-16 w-auto object-contain"
+						className="h-10 sm:h-12 md:h-16 w-auto object-contain"
 					/>
 				</Link>
 
-				<nav className="hidden md:flex items-center gap-10">
+				<nav className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10">
 					{navLinks.map((link) => (
 						<Link
 							key={link.href}
 							href={link.href}
-							className="text-base font-medium text-gray-300 uppercase hover:text-accent-purple hover:scale-105 transition-all duration-300"
+							className="text-xs sm:text-sm md:text-base font-medium text-gray-300 uppercase hover:text-accent-purple hover:scale-105 transition-all duration-300"
 						>
 							{link.label}
 						</Link>

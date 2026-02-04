@@ -26,49 +26,34 @@ export function Advantages({ dict }: AdvantagesProps) {
 			id="advantages"
 			bgImage="/images/advantages/advantages-background.png"
 			bgClassName="top-[20%] h-[120%] w-full"
-			className="relative z-10"
+			className="relative z-10 flex items-center"
+			bottomGradient
 		>
-			<div className="absolute bottom-0 left-0 w-full h-75 bg-linear-to-t from-text-inverse via-text-inverse/80 to-transparent z-0 pointer-events-none" />
-
 			<Container>
 				<ParallaxElement speed={2} type="fly-up">
-					<SectionTitle title={dict.title} className="mb-26" />
+					<SectionTitle
+						title={dict.title}
+						className="mb-10 sm:mb-16 md:mb-20 lg:mb-26"
+					/>
 				</ParallaxElement>
 
 				<ParallaxElement speed={1.5}>
-					<div className="w-full flex flex-wrap justify-center gap-x-4 lg:gap-x-6 mb-18">
+					<div className="w-full h-max flex flex-wrap justify-center sm:gap-x-4 lg:gap-x-6 mb-8 sm:mb-12 lg:mb-18">
 						{dict.items.map((item, index) => {
 							const isEndOfRowMD = (index + 1) % 2 === 0;
+							const isLastItem = index === dict.items.length - 1;
 							const isEndOfRowLG = index === 3 || index === 6;
 							const isTopRowLG = index < 4;
 
-							let lineClasses =
-								"absolute w-[1px] right-[-8px] lg:right-[-12px] hidden ";
+							// MD линия (только для md, скрыта на lg)
+							const showMDLine = !isEndOfRowMD && !isLastItem;
 
-							if (!isEndOfRowMD) {
-								lineClasses +=
-									"md:block md:top-[10%] md:bottom-[10%] md:bg-gradient-to-b md:from-transparent md:via-white/20 md:to-transparent ";
-							} else {
-								lineClasses += "md:hidden ";
-							}
-
-							if (isEndOfRowLG) {
-								lineClasses += "lg:hidden ";
-							} else {
-								lineClasses += "lg:block ";
-
-								if (isTopRowLG) {
-									lineClasses +=
-										"lg:top-[10%] lg:bottom-0 lg:bg-gradient-to-b lg:from-transparent lg:to-white/20 ";
-								} else {
-									lineClasses +=
-										"lg:top-0 lg:bottom-[10%] lg:bg-gradient-to-b lg:from-white/20 lg:to-transparent ";
-								}
-							}
+							// LG линия (только для lg)
+							const showLGLine = !isEndOfRowLG;
 
 							return (
 								<Fragment key={index}>
-									<div className="relative w-full md:w-[46%] lg:w-[23%] flex justify-center py-8">
+									<div className="relative w-full xs:w-[80%] sm:w-[48%] md:w-[46%] lg:w-[23%] flex justify-center py-4 sm:py-6 lg:py-8">
 										<FeatureCard
 											index={index}
 											icon={icons[index]}
@@ -76,13 +61,33 @@ export function Advantages({ dict }: AdvantagesProps) {
 											description={item.desc}
 										/>
 
-										<div className={lineClasses} />
+										{/* MD линия - сплошная, скрыта на lg */}
+										{showMDLine && (
+											<div className="absolute w-px -right-2 top-0 bottom-0 bg-white/20 hidden md:block lg:hidden" />
+										)}
+
+										{/* LG линия - с градиентом */}
+										{showLGLine && (
+											<div
+												className={`absolute w-px -right-3 hidden lg:block ${
+													isTopRowLG
+														? "top-[10%] bottom-0 bg-linear-to-b from-transparent to-white/20"
+														: "top-0 bottom-[10%] bg-linear-to-b from-white/20 to-transparent"
+												}`}
+											/>
+										)}
 									</div>
 
 									{index === 3 && (
 										<div className="hidden lg:flex w-full h-auto items-center justify-center relative z-0">
 											{/* Горизонтальная линия ровно посередине высоты h-12 */}
 											<div className="w-full h-0.5 bg-linear-to-r from-transparent via-white/20 to-transparent" />
+										</div>
+									)}
+
+									{isEndOfRowMD && index < dict.items.length - 1 && (
+										<div className="hidden md:flex lg:hidden w-full h-auto items-center justify-center relative z-0">
+											<div className="w-[80%] h-0.5 bg-linear-to-r from-transparent via-white/20 to-transparent" />
 										</div>
 									)}
 								</Fragment>

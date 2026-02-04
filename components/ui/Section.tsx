@@ -13,6 +13,10 @@ interface SectionProps {
 	bgClassName?: string;
 	parallaxRange?: [string, string];
 	overlayOpacity?: number;
+	topGradient?: boolean;
+	bottomGradient?: boolean;
+	gradientColor?: string;
+	backgroundElements?: ReactNode;
 }
 
 export function Section({
@@ -23,6 +27,10 @@ export function Section({
 	bgClassName,
 	parallaxRange = ["-10%", "10%"],
 	overlayOpacity = 0,
+	topGradient = false,
+	bottomGradient = false,
+	gradientColor = "from-background via-background/60",
+	backgroundElements,
 }: SectionProps) {
 	const sectionRef = useRef<HTMLElement>(null);
 	const containerRef = useContext(ScrollContext);
@@ -43,15 +51,15 @@ export function Section({
 			id={id}
 			ref={sectionRef}
 			className={`
-                relative w-full h-screen min-h-200 flex items-center
-                snap-start snap-always overflow-hidden
+                relative w-full min-h-svh flex items-center
+                lg:snap-start lg:snap-always overflow-hidden
                 ${className}
             `}
 		>
 			{bgImage && (
 				<motion.div
 					style={{ y }}
-					className={`absolute inset-0 -z-20 ${finalBgClass}`}
+					className={`absolute inset-0 -z-10 ${finalBgClass}`}
 				>
 					<Image
 						src={bgImage}
@@ -70,7 +78,28 @@ export function Section({
 				</motion.div>
 			)}
 
-			<div className="relative z-10 w-full h-full flex items-center justify-center pt-(--header-height)">
+			{/* Декоративные элементы фона (под градиентами) */}
+			{backgroundElements && (
+				<div className="absolute inset-0 z-0 pointer-events-none">
+					{backgroundElements}
+				</div>
+			)}
+
+			{/* Верхний градиент для плавного перехода */}
+			{topGradient && (
+				<div
+					className={`absolute top-0 left-0 w-full h-48 sm:h-60 lg:h-75 bg-linear-to-b ${gradientColor} to-transparent z-10 pointer-events-none`}
+				/>
+			)}
+
+			{/* Нижний градиент для плавного перехода */}
+			{bottomGradient && (
+				<div
+					className={`absolute bottom-0 left-0 w-full h-48 sm:h-60 lg:h-75 bg-linear-to-t ${gradientColor} to-transparent z-10 pointer-events-none`}
+				/>
+			)}
+
+			<div className="relative z-20 w-full min-h-[calc(100svh-var(--header-height-scrolled))] mt-(--header-height-scrolled) flex items-center justify-center">
 				{children}
 			</div>
 		</section>

@@ -21,10 +21,9 @@ export function Retention({ dict, lang }: RetentionProps) {
 			bgImage="/images/landings/arc-bg.jpg"
 			bgClassName="absolute top-0 left-0 w-full h-full object-contain object-top -translate-y-1/4 -z-20"
 			overlayOpacity={0.4}
+			topGradient
+			bottomGradient
 		>
-			<div className="absolute top-0 left-0 w-full h-75 bg-linear-to-b from-text-inverse via-text-inverse/80 to-transparent z-0 pointer-events-none" />
-			<div className="absolute bottom-0 left-0 w-full h-75 bg-linear-to-t from-text-inverse via-text-inverse/80 to-transparent z-0 pointer-events-none" />
-
 			<Container className="relative z-10 h-full flex flex-col items-center justify-center text-center">
 				<motion.div
 					initial={{ opacity: 0, scale: 0.9 }}

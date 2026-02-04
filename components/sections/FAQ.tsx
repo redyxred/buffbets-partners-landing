@@ -28,7 +28,7 @@ function TabButton({
 	return (
 		<button
 			onClick={onClick}
-			className={`flex-1 py-4 text-sm md:text-base font-bold uppercase rounded-full transition-colors relative z-10 ${
+			className={`flex-1 py-3 sm:py-4 text-xs sm:text-sm md:text-base font-bold uppercase rounded-full transition-colors relative z-10 ${
 				isActive ? "text-black" : "text-gray-400 hover:text-white"
 			}`}
 		>
@@ -57,9 +57,9 @@ export function FAQ({ dict, lang }: FAQProps) {
 					<SectionTitle title={dict.title} />
 				</ParallaxElement>
 
-				<ParallaxElement speed={4}>
+				<ParallaxElement speed={2}>
 					<div className="w-full flex flex-col items-center">
-						<div className="w-full bg-background-lighter p-1 rounded-full flex mb-12 relative">
+						<div className="w-full bg-background-lighter p-1 rounded-full flex mb-6 sm:mb-8 md:mb-12 relative">
 							<TabButton
 								onClick={() => handleTabChange("general")}
 								isActive={activeTab === "general"}
@@ -89,9 +89,14 @@ export function FAQ({ dict, lang }: FAQProps) {
 								(item: { q: string; a: string }, index: number) => (
 									<motion.div
 										key={`${activeTab}-${index}`}
-										initial={{ opacity: 0, y: 10 }}
-										animate={{ opacity: 1, y: 0 }}
-										transition={{ delay: index * 0.05 }}
+										initial={{ opacity: 0, y: 30, scale: 0.95 }}
+										whileInView={{ opacity: 1, y: 0, scale: 1 }}
+										viewport={{ margin: "-50px" }}
+										transition={{
+											duration: 0.5,
+											delay: index * 0.1,
+											ease: [0.25, 0.1, 0.25, 1],
+										}}
 									>
 										<AccordionItem
 											question={item.q}

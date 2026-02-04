@@ -10,7 +10,7 @@ export function PageWrapper({ children }: { children: ReactNode }) {
 		<ScrollContext.Provider value={containerRef}>
 			<main
 				ref={containerRef}
-				className="h-screen w-full overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth"
+				className="h-dvh w-full overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth"
 			>
 				{children}
 			</main>

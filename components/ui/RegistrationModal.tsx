@@ -38,6 +38,103 @@ function InputField({
 	);
 }
 
+const FTD_MARKS = [0, 50, 100, 200, 500, 1000];
+
+function RangeSlider({
+	label,
+	name,
+	marks = FTD_MARKS,
+}: {
+	label: string;
+	name: string;
+	marks?: number[];
+}) {
+	const [value, setValue] = useState(2); // индекс в массиве marks (100 по умолчанию)
+
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setValue(Number(e.target.value));
+	};
+
+	const percentage = (value / (marks.length - 1)) * 100;
+	// Thumb width = 20px, нужно компенсировать смещение браузера
+	const thumbHalfWidth = 10;
+	const thumbOffset =
+		thumbHalfWidth - (percentage / 100) * (thumbHalfWidth * 2);
+
+	return (
+		<div className="flex flex-col gap-3">
+			<div className="flex justify-between items-center">
+				<label className="text-xs text-gray-400 uppercase font-bold tracking-wider ml-1">
+					{label}
+				</label>
+				<span className="text-primary font-bold text-lg">
+					{marks[value]}+ FTD
+				</span>
+			</div>
+
+			<div className="relative h-5 flex items-center">
+				<input
+					type="range"
+					name={name}
+					min={0}
+					max={marks.length - 1}
+					step={1}
+					value={value}
+					onChange={handleChange}
+					className="absolute inset-0 w-full h-full bg-transparent appearance-none cursor-pointer z-10
+						[&::-webkit-slider-thumb]:appearance-none
+						[&::-webkit-slider-thumb]:w-5
+						[&::-webkit-slider-thumb]:h-5
+						[&::-webkit-slider-thumb]:rounded-full
+						[&::-webkit-slider-thumb]:bg-primary
+						[&::-webkit-slider-thumb]:border-2
+						[&::-webkit-slider-thumb]:border-white
+						[&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(250,207,0,0.5)]
+						[&::-webkit-slider-thumb]:cursor-pointer
+						[&::-webkit-slider-thumb]:transition-transform
+						[&::-webkit-slider-thumb]:hover:scale-110
+						[&::-moz-range-thumb]:w-5
+						[&::-moz-range-thumb]:h-5
+						[&::-moz-range-thumb]:rounded-full
+						[&::-moz-range-thumb]:bg-primary
+						[&::-moz-range-thumb]:border-2
+						[&::-moz-range-thumb]:border-white
+						[&::-moz-range-thumb]:cursor-pointer
+					"
+				/>
+				{/* Track background */}
+				<div className="absolute left-0 right-0 h-2 rounded-full bg-[#1A1626] border border-white/5 pointer-events-none" />
+				{/* Active track */}
+				<div
+					className="absolute left-0 h-2 rounded-full bg-gradient-to-r from-primary/80 to-primary pointer-events-none"
+					style={{
+						width: `calc(${percentage}% + ${thumbOffset}px)`,
+					}}
+				/>
+			</div>
+
+			{/* Marks */}
+			<div className="flex justify-between mt-1">
+				{marks.map((mark, index) => (
+					<button
+						key={mark}
+						type="button"
+						onClick={() => setValue(index)}
+						className={`text-xs transition-colors cursor-pointer w-5 flex justify-center ${
+							index <= value ? "text-primary" : "text-gray-500"
+						} hover:text-primary`}
+					>
+						{mark}
+					</button>
+				))}
+			</div>
+
+			{/* Hidden input for form submission */}
+			<input type="hidden" name={`${name}_value`} value={marks[value]} />
+		</div>
+	);
+}
+
 export function RegistrationModal({
 	isOpen,
 	onClose,
@@ -141,12 +238,7 @@ export function RegistrationModal({
 											name="traffic"
 										/>
 
-										<InputField
-											label={dict.fields.ftd_volume}
-											placeholder={dict.placeholders.ftd_volume}
-											name="ftd"
-											type="text"
-										/>
+										<RangeSlider label={dict.fields.ftd_volume} name="ftd" />
 
 										<Button type="submit" className="mt-4 w-full">
 											{dict.submit}
@@ -174,7 +266,7 @@ export function RegistrationModal({
 										</h3>
 										<p className="text-gray-400 mb-8">{dict.success_desc}</p>
 										<Button onClick={onClose} size="md" variant="outline">
-											Закрыть
+											{dict.close}
 										</Button>
 									</div>
 								)}

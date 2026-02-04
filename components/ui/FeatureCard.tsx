@@ -33,7 +33,7 @@ export function FeatureCard({
 					className="relative z-10 w-full h-full object-contain"
 				/>
 			</div>
-			<div className="w-full h-18 flex items-start justify-center mb-2">
+			<div className="w-full min-h-18 flex items-start justify-center mb-2">
 				<h3 className="text-xl font-bold text-white leading-tight font-conthrax">
 					{title}
 				</h3>

@@ -42,7 +42,7 @@
 				"desc": "From SEO to social media and streams — flexible rules and tools for different channels."
 			},
 			{
-				"title": "Payment Infrastructure That's Always Online",
+				"title": "Payment Infrastructure Always Online",
 				"desc": "No deposit issues, clients don't leave, and minimal friction for conversion."
 			}
 		]
@@ -149,6 +149,7 @@
 			"ftd_volume": "e.g.: 50-100"
 		},
 		"submit": "SUBMIT APPLICATION",
+		"close": "CLOSE",
 		"success_title": "APPLICATION SUBMITTED!",
 		"success_desc": "Thank you! We've already started processing it."
 	},

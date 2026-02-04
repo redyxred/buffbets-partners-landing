@@ -32,9 +32,9 @@ export function Button({
 	};
 
 	const sizes = {
-		sm: "text-sm font-bold uppercase px-8 h-10",
-		md: "text-base font-bold uppercase px-8 h-14",
-		lg: "text-lg font-bold uppercase px-24 h-16",
+		sm: "text-sm xl:text-base font-bold uppercase px-6 xl:px-8 h-10 xl:h-14",
+		md: "text-sm sm:text-base font-bold uppercase px-6 sm:px-8 h-12 sm:h-14",
+		lg: "text-base sm:text-lg font-bold uppercase px-12 sm:px-24 h-14 sm:h-16",
 	};
 
 	const combinedClasses = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;

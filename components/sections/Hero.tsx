@@ -24,7 +24,7 @@ export function Hero({ dict, lang }: HeroProps) {
 			parallaxRange={["-15%", "20%"]}
 			className="z-30"
 		>
-			<Container className="grid md:grid-cols-2 items-center min-h-[90vh]">
+			<Container className="grid grid-cols-1 lg:grid-cols-2 items-center min-h-[90vh]">
 				<ParallaxElement speed={2}>
 					<motion.div
 						initial={{
@@ -38,9 +38,9 @@ export function Hero({ dict, lang }: HeroProps) {
 						transition={{
 							duration: 0.6,
 						}}
-						className="relative z-10 flex flex-col items-start text-left min-w-0"
+						className="relative z-10 flex flex-col items-center lg:items-start text-center md:text-left order-2 md:order-1 min-w-0"
 					>
-						<h1 className="font-conthrax uppercase text-white mb-6">
+						<h1 className="font-conthrax text-center lg:text-left uppercase text-white mb-6">
 							{titleLines.map((line, index) => (
 								<span
 									key={index}
@@ -51,7 +51,7 @@ export function Hero({ dict, lang }: HeroProps) {
 							))}
 						</h1>
 
-						<p className="w-full text-lg md:text-[28px] text-gray-200 leading-[1.1] mb-10 ">
+						<p className="w-full text-center lg:text-left text-lg md:text-[28px] text-gray-200 leading-[1.1] mb-10 ">
 							{dict.subtitle}
 						</p>
 
@@ -61,7 +61,7 @@ export function Hero({ dict, lang }: HeroProps) {
 					</motion.div>
 				</ParallaxElement>
 
-				<div className="relative z-20 justify-self-end w-full flex justify-end">
+				<div className="relative z-20 justify-self-end w-full flex justify-center lg:justify-end">
 					<ParallaxElement speed={5}>
 						<motion.div
 							initial={{ opacity: 0, x: 100 }}
@@ -70,13 +70,13 @@ export function Hero({ dict, lang }: HeroProps) {
 								duration: 1,
 								delay: 0.4,
 							}}
-							className="w-full"
+							className="w-auto h-auto"
 						>
 							<Image
 								src="/images/hero/rocket.png"
 								width={500}
 								height={500}
-								className="w-full max-w-100 md:max-w-full h-auto object-contain"
+								className="w-full max-w-75 sm:max-w-120 md:max-w-200 lg:h-200 object-contain"
 								alt="Rocket"
 							/>
 						</motion.div>
