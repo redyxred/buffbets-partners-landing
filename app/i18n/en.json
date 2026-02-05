@@ -1,49 +1,49 @@
 {
 	"header": {
 		"nav": {
-			"advantages": "Benefits",
+			"advantages": "Advantages",
 			"faq": "FAQ",
 			"providers": "Providers",
 			"contacts": "Contacts"
 		},
 		"login": "Login",
-		"register": "Sign Up"
+		"register": "Register"
 	},
 	"hero": {
 		"title": "Your Traffic.\n Our Brands.\n Shared Profit.",
-		"subtitle": "Up to 60% RevShare, optimized funnels, detailed FTD/LTV analytics, quality retention.",
-		"register": "Sign Up"
+		"subtitle": "Up to 60% RevShare, well-built funnels, detailed analytics for FTD/LTV, high-quality retention.",
+		"register": "Register"
 	},
 	"advantages": {
-		"title": "Our Benefits",
+		"title": "Our Advantages",
 		"items": [
 			{
 				"title": "Promo for Every Event",
-				"desc": "We prepare relevant promotions and creatives for top events — launch faster, increase conversion and FTD."
+				"desc": "We prepare timely promotions and creatives for top events - launch faster, get higher conversions and FTD."
 			},
 			{
 				"title": "Multilingual Landings for Any GEO",
-				"desc": "Flexible templates and content localization help match offers with audiences more precisely and boost CR."
+				"desc": "Flexible templates and localized content help to link offers with audiences and increase CR."
 			},
 			{
-				"title": "Bonus Grids for Conversion Growth",
-				"desc": "Personalized promos and bonuses by traffic segments enhance first deposits and player LTV."
+				"title": "Bonus grids to boost conversion",
+				"desc": "Personalized promos and bonuses by traffic segment enhance first deposits and players' LTV"
 			},
 			{
 				"title": "Transparent Real-Time Analytics",
 				"desc": "Detailed reports on clicks, FTD and retention."
 			},
 			{
-				"title": "High Casino Audience Retention",
-				"desc": "Well-designed retention mechanics and regular events bring players back and increase RevShare."
+				"title": "High retention of casino audience",
+				"desc": "Thoughtful retention mechanics and regular events brings players back and increase RevShare's part."
 			},
 			{
-				"title": "Support for Multiple Traffic Sources",
-				"desc": "From SEO to social media and streams — flexible rules and tools for different channels."
+				"title": "Support and many traffic sources",
+				"desc": "From SEO to social networks and streams - flexible rules and tools for various channels."
 			},
 			{
-				"title": "Payment Infrastructure Always Online",
-				"desc": "No deposit issues, clients don't leave, and minimal friction for conversion."
+				"title": "\"Always online\" payment infrastructure",
+				"desc": "No deposit issues, clients stay and friction for conversion is minimal."
 			}
 		]
 	},
@@ -53,61 +53,61 @@
 	"landings": {
 		"title": "LANDINGS THAT CONVERT:\nFOR EVERY SLOT AND EVENT",
 		"list": [
-			"Well-designed funnels at every stage",
+			"Well-built funnels at every stage",
 			"Dynamic elements",
 			"Localization",
 			"Quick launch"
 		],
-		"cta": "Sign Up"
+		"cta": "Register"
 	},
 	"retention": {
 		"title": "THE BEST PLAYER RETENTION\nTEAM ON THE MARKET!",
 		"subtitle": "Multichannel work with every user:",
 		"channels": "email, SMS, AI Call, Push, Pop-up, Call Center, WhatsApp, Telegram.",
-		"description": "We know how to work with players to keep them with us and generate profit for you!",
-		"cta": "SIGN UP"
+		"description": "We know how to work with players so that they stay with us and bring you profit!",
+		"cta": "REGISTER"
 	},
 	"faq": {
 		"title": "FAQ",
 		"tabs": {
 			"general": "ABOUT THE AFFILIATE PROGRAM",
-			"income": "INCOME AND TOOLS"
+			"income": "Revenue and tools"
 		},
 		"items": {
 			"general": [
 				{
 					"q": "What is the BuffBets affiliate program?",
-					"a": "It's a program that allows you to earn by attracting new players to our platform."
+					"a": "This is a program that allows you to earn money by referring new players to our platform."
 				},
 				{
 					"q": "How does the BuffBets affiliate program work?",
-					"a": "You place affiliate links, users register, and you receive a percentage of the profit."
+					"a": "You place affiliate links, users register through them, and you receive a percentage of the generated profit."
 				},
 				{
 					"q": "How do I become a BuffBets affiliate partner?",
-					"a": "Register on our website, fill out your profile, and contact a manager to activate your account."
+					"a": "Register on our website, complete your profile, and contact a manager to activate your account."
 				},
 				{
 					"q": "Is participation in the affiliate program free?",
-					"a": "Yes, participation is completely free. We don't charge any fees for joining."
+					"a": "Yes, participation is completely free. We do not charge any fees to join."
 				},
 				{
-					"q": "Which GEOs can I attract traffic from?",
-					"a": "We work with a wide list of GEOs. Check with your personal manager for the current list."
+					"q": "In which GEOs can traffic be attracted?",
+					"a": "We operate with a wide range of GEOs. Please check the current list with your personal manager."
 				},
 				{
-					"q": "What is an affiliate link and how do I get one?",
-					"a": "It's a unique link that assigns a player to you. It's available in your dashboard after registration."
+					"q": "What is an affiliate link and how to get it?",
+					"a": "It is a unique link that assigns the player to you. It becomes available in your personal account after registration."
 				},
 				{
 					"q": "Can I promote BuffBets on multiple platforms?",
-					"a": "Yes, you can create separate streams for each platform to track effectiveness."
+					"a": "Yes, you can create separate traffic flows for each platform to track performance."
 				}
 			],
 			"income": [
 				{
 					"q": "How often are payouts made?",
-					"a": "Payouts are made weekly or monthly, depending on your plan terms."
+					"a": "Payouts are made weekly or monthly, depending on the terms of your tariff plan."
 				},
 				{
 					"q": "What is the minimum withdrawal amount?",
@@ -115,7 +115,7 @@
 				},
 				{
 					"q": "What payment models are available?",
-					"a": "We work with CPA, RevShare, and Hybrid models. Discuss terms with your manager."
+					"a": "We work with CPA, RevShare, and Hybrid models. Please discuss the terms with your manager."
 				}
 			]
 		}
@@ -124,7 +124,7 @@
 		"title": "CONTACTS",
 		"subtitle_prefix": "AFFILIATE PROGRAM",
 		"subtitle_highlight": "BUFFBETS PARTNERS",
-		"subtitle_suffix": "HAVE QUESTIONS?",
+		"subtitle_suffix": "Any questions?",
 		"email_label": "E-mail",
 		"telegram_label": "Telegram",
 		"cta": "CONTACT US NOW",
@@ -155,9 +155,9 @@
 	},
 	"footer": {
 		"nav": {
-			"recomendations": "recommendations",
-			"privacy_policy": "privacy policy",
-			"rules": "Affiliate Program Rules"
+			"recomendations": "Recommendations",
+			"privacy_policy": "Privacy Policy",
+			"rules": "Terms and Conditions"
 		}
 	}
 }

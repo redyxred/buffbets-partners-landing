@@ -11,9 +11,10 @@ import { Button } from "../ui/Button";
 interface LandingsProps {
 	dict: Dict["landings"];
 	lang: Locale;
+	onRegisterClick: () => void;
 }
 
-export function Landings({ dict, lang }: LandingsProps) {
+export function Landings({ dict, lang, onRegisterClick }: LandingsProps) {
 	const titleLines = dict.title.split("\n");
 
 	const backgroundElements = (
@@ -145,7 +146,7 @@ export function Landings({ dict, lang }: LandingsProps) {
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ delay: dict.list.length * 0.2 }}
 							>
-								<Button href="/register" lang={lang} size="lg">
+								<Button onClick={onRegisterClick} size="lg">
 									{dict.cta}
 								</Button>
 							</motion.div>

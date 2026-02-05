@@ -10,6 +10,7 @@ interface ButtonProps {
 	lang?: string;
 	onClick?: () => void;
 	type?: "button" | "submit" | "reset";
+	target?: string;
 }
 
 export function Button({
@@ -21,6 +22,7 @@ export function Button({
 	type = "button",
 	onClick,
 	lang,
+	target,
 }: ButtonProps) {
 	const baseClasses =
 		"font-rubik inline-flex items-center justify-center rounded-full cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95";
@@ -48,7 +50,7 @@ export function Button({
 		}
 
 		return (
-			<Link href={finalHref} className={combinedClasses}>
+			<Link href={finalHref} className={combinedClasses} target={target}>
 				{children}
 			</Link>
 		);

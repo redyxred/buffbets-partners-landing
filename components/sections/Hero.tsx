@@ -11,9 +11,10 @@ import { motion } from "framer-motion";
 interface HeroProps {
 	dict: Dict["hero"];
 	lang: Locale;
+	onRegisterClick: () => void;
 }
 
-export function Hero({ dict, lang }: HeroProps) {
+export function Hero({ dict, lang, onRegisterClick }: HeroProps) {
 	const titleLines = dict.title.split("\n");
 
 	return (
@@ -55,7 +56,7 @@ export function Hero({ dict, lang }: HeroProps) {
 							{dict.subtitle}
 						</p>
 
-						<Button href="/register" lang={lang} size="lg">
+						<Button onClick={onRegisterClick} size="lg">
 							{dict.register}
 						</Button>
 					</motion.div>

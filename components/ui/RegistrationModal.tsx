@@ -32,7 +32,7 @@ function InputField({
 				type={type}
 				name={name}
 				placeholder={placeholder}
-				className="w-full bg-[#1A1626] border border-white/5 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+				className="w-full bg-[#1A1626] border border-white/5 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary/70 focus:ring-1 focus:ring-primary/70 transition-all"
 			/>
 		</div>
 	);

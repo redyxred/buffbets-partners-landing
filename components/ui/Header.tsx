@@ -10,10 +10,12 @@ import { Button } from "./Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ScrollContext } from "./ScrollContext";
 import { useActiveSection, type SectionId } from "@/hooks/useActiveSection";
+import { LOGIN_URL } from "@/app/constants";
 
 interface HeaderProps {
 	lang: Locale;
 	dict: Dict["header"];
+	onRegisterClick: () => void;
 }
 
 interface NavLink {
@@ -21,7 +23,7 @@ interface NavLink {
 	label: string;
 }
 
-export function Header({ dict, lang }: HeaderProps) {
+export function Header({ dict, lang, onRegisterClick }: HeaderProps) {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const containerRef = useContext(ScrollContext);
@@ -178,10 +180,15 @@ export function Header({ dict, lang }: HeaderProps) {
 
 					{/* Desktop buttons */}
 					<div className="hidden lg:flex items-center gap-4 xl:gap-6">
-						<Button size="sm" href="/register" lang={lang}>
+						<Button size="sm" onClick={onRegisterClick}>
 							{dict.register}
 						</Button>
-						<Button variant="outline" size="sm" href="/login" lang={lang}>
+						<Button
+							variant="outline"
+							size="sm"
+							href={LOGIN_URL}
+							target="_blank"
+						>
 							{dict.login}
 						</Button>
 						<LanguageSwitcher
@@ -260,14 +267,14 @@ export function Header({ dict, lang }: HeaderProps) {
 
 					{/* Mobile buttons */}
 					<div className="mt-auto flex flex-col gap-3">
-						<Button size="md" href="/register" lang={lang} className="w-full">
+						<Button size="md" onClick={onRegisterClick} className="w-full">
 							{dict.register}
 						</Button>
 						<Button
 							variant="outline"
 							size="md"
-							href="/login"
-							lang={lang}
+							href={LOGIN_URL}
+							target="_blank"
 							className="w-full"
 						>
 							{dict.login}

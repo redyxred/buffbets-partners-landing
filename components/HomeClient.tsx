@@ -27,11 +27,11 @@ export default function HomeClient({ dict, lang }: HomeClientProps) {
 	};
 	return (
 		<Fragment>
-			<Header lang={lang} dict={dict.header} />
-			<Hero dict={dict.hero} lang={lang} />
+			<Header lang={lang} dict={dict.header} onRegisterClick={openModal} />
+			<Hero dict={dict.hero} lang={lang} onRegisterClick={openModal} />
 			<Advantages dict={dict.advantages} />
 			<Providers dict={dict.providers} />
-			<Landings dict={dict.landings} lang={lang} />
+			<Landings dict={dict.landings} lang={lang} onRegisterClick={openModal} />
 			<Retention dict={dict.retention} lang={lang} />
 			<FAQ dict={dict.faq} lang={lang} />
 			<Contacts
